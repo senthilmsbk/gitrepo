@@ -1,0 +1,13 @@
+server: 
+  port: 8081
+  
+spring:
+  application:
+    name: EMPLOYEE
+ 
+eureka:
+  client:
+    service-url:
+      defaultAZone: http:localhost:8761/eureka
+    
+    
