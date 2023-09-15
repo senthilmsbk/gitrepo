@@ -1,0 +1,23 @@
+
+server: 
+  port: 8086
+  
+eureka:
+  client:
+    service-url:
+      defaultAZone: http://localhost:8761/eureka
+  
+spring:
+  application:
+    name: GATEWAY
+  cloud:
+    gateway:
+      routes:
+        - id: EMPLOYEE-ROUTE
+          uri: lb://EMPLOYEE-ROUTE
+          predicates:
+            - Path=/emp/**
+        - id: DEPARTMENT-ROUTE
+          uri: lb://DEPARTMENT-ROUTE
+          predicates:
+            - Path=/dept/**

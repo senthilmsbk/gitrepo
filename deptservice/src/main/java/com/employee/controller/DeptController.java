@@ -4,12 +4,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/emp")
-public class EmployeeController {
+@RequestMapping("/dept")
+public class DeptController {
 	
 	@RequestMapping("/test")
 	String empTest() {
-		return "This is employee service";
+		return "This is dept  service";
 	}
 
 }

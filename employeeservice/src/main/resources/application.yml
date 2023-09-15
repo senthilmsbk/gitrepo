@@ -3,11 +3,11 @@ server:
   
 spring:
   application:
-    name: EMPLOYEE
+    name: EMPLOYEE-ROUTE
  
 eureka:
   client:
     service-url:
-      defaultAZone: http:localhost:8761/eureka
+      defaultZone: http://localhost:8761/eureka
     
     
